@@ -1,0 +1,23 @@
+{
+  "name": "firdavs/api",
+  "type": "tastyigniter-extension",
+  "description": "No description provided yet...",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Firdavs"
+    }
+  ],
+  "extra": {
+    "tastyigniter-extension": {
+      "code": "firdavs.api",
+      "name": "Api",
+      "icon": {
+        "class": "fa fa-plug",
+        "backgroundColor": "#000000",
+        "color": "#FFF"
+      }
+    }
+  },
+  "code": "firdavs.api"
+}
