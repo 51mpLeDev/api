@@ -16,7 +16,7 @@ class MenuController extends Controller
 
     public function updateMenusPrices(Request $request)
     {
-        if (!$request->get('items') || $request->get('procent')){
+        if (!$request->get('items') || !$request->get('procent')){
             return redirect()->back();
         }
         $menus = Menus_model::whereIn('menu_id', $request->get('items'))->get();
