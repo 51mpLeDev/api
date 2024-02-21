@@ -9,7 +9,7 @@ class MenuController extends Controller
 {
     public function getMenusItems(Request $request)
     {
-        $menus = Menus_model::with('categories')->paginate(10);
+        $menus = Menus_model::with('categories')->paginate(100);
 
         return response()->json(['data' => $menus, 'pagination' => (string) $menus->links()]);
     }
