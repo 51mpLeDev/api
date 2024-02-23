@@ -11,7 +11,7 @@ class Locationable extends Model
 
     public static function getLocationTables($id)
     {
-        $ids = static::where('location_id', $id)->where('locationable_type', 'tables')->get('id')->toArray();
+        $ids = static::where('location_id', $id)->where('locationable_type', 'tables')->get('tables_id')->toArray();
         return Tables_model::whereIn('table_id', $ids)->get();
     }
 }
