@@ -1,10 +1,9 @@
 <?php
 
-namespace Firdavs\OwnersDashboard\Database\Migrations;
+namespace Firdavs\Api\Database\Migrations;
 
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateLocationSettings extends Migration
