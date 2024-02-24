@@ -17,11 +17,4 @@ class UpdateColumnsInOrderTable extends Migration
             $table->string('payment')->nullable();
         });
     }
-
-    public function down()
-    {
-        Schema::table('orders', function (Blueprint $table){
-            $table->dropColumn('table_id');
-        });
-    }
 }
