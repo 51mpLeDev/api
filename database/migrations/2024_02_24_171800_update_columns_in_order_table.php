@@ -11,10 +11,10 @@ class UpdateColumnsInOrderTable extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table){
-            $table->string('last_name')->nullable();
-            $table->string('email')->nullable();
-            $table->string('telephone')->nullable();
-            $table->string('payment')->nullable();
+            $table->string('last_name')->change()->nullable();
+            $table->string('email')->change()->nullable();
+            $table->string('telephone')->change()->nullable();
+            $table->string('payment')->change()->nullable();
         });
     }
 }
