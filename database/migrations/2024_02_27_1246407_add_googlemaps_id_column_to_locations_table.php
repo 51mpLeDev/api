@@ -11,7 +11,7 @@ class AddGooglemapsIdColumnToLocationsTable extends Migration
     public function up()
     {
         Schema::table('locations', function (Blueprint $table){
-            $table->integer('googlemaps_id')->nullable();
+            $table->unsignedBigInteger('googlemaps_id')->nullable();
         });
     }
 
