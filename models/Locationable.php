@@ -9,6 +9,8 @@ class Locationable extends Model
 {
     protected $table = 'locationables';
 
+    public $timestamps = false;
+
     public static function getLocationTables($id)
     {
         $ids = static::where('location_id', $id)->where('locationable_type', 'tables')->get('locationable_id')->toArray();
