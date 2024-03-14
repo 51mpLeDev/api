@@ -19,5 +19,8 @@
       }
     }
   },
-  "code": "firdavs.api"
+  "code": "firdavs.api",
+  "require": {
+    "intervention/image": "^3.4"
+  }
 }
