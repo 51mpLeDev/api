@@ -12,6 +12,8 @@ class ModelsConfig extends Model
 
     protected $primaryKey = 'model_config_id';
 
+    public $timestamps = false;
+
     public function staff()
     {
         return $this->belongsTo(Staffs_model::class, 'staff_id', 'staff_id');
