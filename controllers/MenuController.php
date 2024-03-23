@@ -40,7 +40,9 @@ class MenuController extends Controller
 
     public function getAllergens(Request $request)
     {
-        $allergens = Allergens_model::all();
+        $search_query = $request->get('search');
+
+        $allergens = Allergens_model::where('name', 'LIKE', "%$search_query")->get();
 
         return response()->json(['data' => $allergens]);
     }
