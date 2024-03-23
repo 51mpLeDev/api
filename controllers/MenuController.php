@@ -42,7 +42,7 @@ class MenuController extends Controller
     {
         $search_query = $request->get('search');
 
-        $allergens = Allergens_model::where('name', 'LIKE', "%$search_query")->get();
+        $allergens = Allergens_model::where('name', 'LIKE', "%$search_query%")->get();
 
         return response()->json(['data' => $allergens]);
     }
