@@ -2,6 +2,7 @@
 
 namespace Firdavs\Api\Controllers;
 
+use Admin\Models\Allergens_model;
 use Admin\Models\Menus_model;
 use System\Classes\Controller;
 use Illuminate\Http\Request;
@@ -34,5 +35,13 @@ class MenuController extends Controller
             $menu->update(['menu_price' => $newPrice]);
         }
         return redirect()->back();
+    }
+
+
+    public function getAllergens(Request $request)
+    {
+        $allergens = Allergens_model::all();
+
+        return response()->json(['data' => $allergens]);
     }
 }
