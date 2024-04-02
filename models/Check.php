@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Check extends Model
 {
     protected $table = 'checks';
-
+    public $timestamps = false;
     public function orders()
     {
         return Orders_model::whereIn('order_id', $this->orders_ids)->get();
