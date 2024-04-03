@@ -12,7 +12,7 @@ class Check extends Model
     protected $primaryKey = 'check_id';
     public function orders()
     {
-        return Orders_model::whereIn('order_id', explode(',', $this->orders_ids))->get();
+        return Orders_model::whereIn('order_id', json_decode($this->orders_ids))->get();
     }
 
     public function main_order()
