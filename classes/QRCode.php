@@ -3,6 +3,7 @@
 namespace Firdavs\Api\Classes;
 
 use Endroid\QrCode\Color\Color;
+use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\Label\Label;
 use Endroid\QrCode\QrCode as qr_code;
 use Endroid\QrCode\Writer\PngWriter;
@@ -14,11 +15,15 @@ class QRCode
     protected $encoding;
     protected $backgroung;
 
-    public function __construct($size = 300, $margin = 10, $encoding = 'UTF-8', $background = '#FFF')
+    public function __construct($size = 300, $margin = 10, Encoding $encoding = null, $background = '#FFF')
     {
         $this->size = $size;
         $this->margin = $margin;
-        $this->encoding = $encoding;
+        if ($encoding){
+            $this->encoding = $encoding;
+        }else{
+            $this->encoding = new Encoding('UTF-8');
+        }
         $this->backgroung = $background;
     }
 
