@@ -10,6 +10,7 @@ class TableQRCode extends Model
 {
     protected $primaryKey = 'table_qr_code_id';
     public $timestamps = false;
+    public $table = 'table_qr_codes';
 
     public $appends = ['location'];
     public function table()

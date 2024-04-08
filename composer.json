@@ -21,6 +21,7 @@
   },
   "code": "firdavs.api",
   "require": {
-    "intervention/image": "^3.4"
+    "intervention/image": "^3.4",
+    "endroid/qr-code": "^5.0"
   }
 }
