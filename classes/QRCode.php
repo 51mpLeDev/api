@@ -17,7 +17,7 @@ class QRCode
     public function __construct($size = 300, $margin = 10, $encoding = 'UTF-8', $background = '#FFF')
     {
         $this->size = $size;
-        $this->margin = $$margin;
+        $this->margin = $margin;
         $this->encoding = $encoding;
         $this->backgroung = $background;
     }
