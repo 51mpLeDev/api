@@ -37,7 +37,7 @@ class QRCode
             ->setForegroundColor(new Color(0, 0, 0))
             ->setBackgroundColor(new Color(255, 255, 255));
 
-        $logo = Logo::create(asset('/assets/media/upload/ClonGarson.jpg'))
+        $logo = Logo::create(asset('/assets/media/uploads/ClonGarson.jpg'))
             ->setResizeToWidth(50)
             ->setPunchoutBackground(true)
         ;
