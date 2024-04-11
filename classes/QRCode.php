@@ -5,6 +5,7 @@ namespace Firdavs\Api\Classes;
 use Endroid\QrCode\Color\Color;
 use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\Label\Label;
+use Endroid\QrCode\Logo\Logo;
 use Endroid\QrCode\QrCode as qr_code;
 use Endroid\QrCode\Writer\PngWriter;
 
@@ -36,11 +37,16 @@ class QRCode
             ->setForegroundColor(new Color(0, 0, 0))
             ->setBackgroundColor(new Color(255, 255, 255));
 
+        $logo = Logo::create(asset('/assets/media/upload/ClonGarson.jpg'))
+            ->setResizeToWidth(50)
+            ->setPunchoutBackground(true)
+        ;
+
         $label = Label::create('Label')
             ->setTextColor(new Color(255, 0, 0));
 
         $wirter = new PngWriter();
-        $result = $wirter->write($qr_code);
+        $result = $wirter->write($qr_code, $logo, $label);
         $result->saveToFile("{$path}/{$image_name}");
     }
 }
