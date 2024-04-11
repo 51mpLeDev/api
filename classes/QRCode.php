@@ -28,7 +28,7 @@ class QRCode
         $this->backgroung = $background;
     }
 
-    public function create(string $data, string $path, string $image_name)
+    public function create(string $data, string $path, string $image_name, string|null $label)
     {
         $qr_code = qr_code::create($data)
             ->setSize($this->size)
@@ -39,10 +39,9 @@ class QRCode
 
         $logo = Logo::create(asset('/assets/media/uploads/ClonGarson.jpg'))
             ->setResizeToWidth(50)
-            ->setPunchoutBackground(true)
-        ;
+            ->setPunchoutBackground(true);
 
-        $label = Label::create('Label')
+        $label = Label::create($label ?? '')
             ->setTextColor(new Color(255, 0, 0));
 
         $wirter = new PngWriter();
