@@ -11,7 +11,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('allergens', function (Blueprint $table){
-            $table->unsignedBigInteger('language_id')->nullable();
+            $table->unsignedBigInteger('language_id')->default(1);
             $table->dropColumn('locale');
         });
     }
